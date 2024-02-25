@@ -2,7 +2,7 @@ function Color(red, green, blue, alpha) {
   this.red = red;
   this.green = green;
   this.blue = blue;
-  this.alpha = typeof alpha !== "undefined" ? alpha : "";
+  this.alpha = typeof alpha !== "undefined" ? alpha : 1;
 }
 //I only need one function for RGB and RGBa because if not provided, I set it to 1 (full opacity)
 Color.prototype.rgba = function () {
@@ -34,5 +34,3 @@ bodyEl.addEventListener("click", () => {
   text.innerHTML = `This color is generated with color ${loopedColors[i]}`;
   i = (i + 1) % loopedColors.length;
 });
-
-//Function that loops the color pink
